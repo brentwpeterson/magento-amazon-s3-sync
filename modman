@@ -1,0 +1,5 @@
+#Amazon s3
+app/code/local/Wage/Amazonsync/	app/code/local/Wage/Amazonsync/
+app/etc/modules/Wage_Amazonsync.xml	app/etc/modules/Wage_Amazonsync.xml
+
+

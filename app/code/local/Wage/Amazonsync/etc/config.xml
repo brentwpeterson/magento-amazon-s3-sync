@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wage_Amazonsync>
+            <version>0.0.1</version>
+        </Wage_Amazonsync>
+    </modules>
+    <global>
+        <models>
+            <amazonsync>
+                <class>Wage_Amazonsync_Model</class>
+            </amazonsync>
+        </models>
+        <helpers>
+            <amazonsync>
+                <class>Wage_Amazonsync_Helper</class>
+            </amazonsync>
+        </helpers>
+        <blocks>
+            <amazonsync>
+                <class>Wage_Amazonsync_Block</class>
+            </amazonsync>
+        </blocks>
+        <!--<events>
+            <controller_front_init_before>
+                <observers>
+                    <module_name>
+                        <type>singleton</type>
+                        <class>Wage_Amazonsync_Model_Observer</class>
+                        <method>controllerFrontInitBefore</method>
+                    </module_name>
+                </observers>
+            </controller_front_init_before>
+        </events>-->
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <amazonsync>
+                                            <title>Amazon Setting</title>
+                                        </amazonsync>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <amazonsync after="Mage_Adminhtml">Wage_Amazonsync</amazonsync>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <amazonsync>
+            <general>
+                <access_key_id backend_model="adminhtml/system_config_backend_encrypted"/>
+                <secret_access_key backend_model="adminhtml/system_config_backend_encrypted"/>
+            </general>
+        </amazonsync>
+    </default>
+</config> 

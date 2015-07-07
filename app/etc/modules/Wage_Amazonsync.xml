@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wage_Amazonsync>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.0.1</version>
+        </Wage_Amazonsync>
+    </modules>
+</config>
