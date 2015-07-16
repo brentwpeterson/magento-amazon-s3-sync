@@ -76,4 +76,16 @@
             </general>
         </amazonsync>
     </default>
+    <crontab>
+        <jobs>
+            <sync_magento_dir_to_amazon>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>amazonsync/syncfile::syncDirectory</model>
+                </run>
+            </sync_magento_dir_to_amazon>
+        </jobs>
+    </crontab>
 </config> 
